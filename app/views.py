@@ -12,6 +12,8 @@ from flask import render_template, request
 # Routing for your application.
 ###
 
+#Lab7
+
 
 # Please create all new routes and view functions above this route.
 # This route is now our catch all route for our VueJS single page
