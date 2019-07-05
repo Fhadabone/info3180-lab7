@@ -1,6 +1,13 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'v\xf9\xf7\x11\x13\x18\xfaMYp\xed_\xe8\xc9w\x06\x8e\xf0f\xd2\xba\xfd\x8c\xda'
-UPLOAD_FOLDER = './app/static/uploads'
-from app import views
+
+app.config['SECRET_KEY'] = 'Aw_VYH5iDVDqpRW2gSAmQFJWLNWJU3cEOd0jtNkzMaM'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/leroy/Desktop/photogram/photogram.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['UPLOAD_FOLDER']='app/static/uploads/'
+
+db = SQLAlchemy(app)
+from app import api
+
